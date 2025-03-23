@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,86 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Card animations */
+.MuiCard-root {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-4px);
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button animations */
+.MuiButton-root {
+  transition: all 0.2s ease-in-out;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-1px);
+}
+
+/* Table styles */
+.MuiTableRow-root {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(37, 99, 235, 0.04) !important;
+}
+
+/* Dialog animations */
+.MuiDialog-paper {
+  animation: dialogFadeIn 0.3s ease-out;
+}
+
+@keyframes dialogFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Toast notifications */
+.Toastify__toast {
+  border-radius: 8px !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.Toastify__toast-body {
+  font-size: 14px;
+  font-weight: 500;
 }
