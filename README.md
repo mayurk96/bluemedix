@@ -23,3 +23,19 @@ findind vulnerabilities with owasp zap and burp suite
 ![Image](https://github.com/user-attachments/assets/63c4bdb5-7597-4f64-af11-d620090b5ccd)
 
 ![Image](https://github.com/user-attachments/assets/e2172da2-7eea-433d-b972-09285c36e7b9)
+
+Key Vulnerabilities Identified:
+1. Content Security Policy (CSP) Header Not Set (57 occurrences):
+The application does not define a CSP header, which can lead to cross-site scripting (XSS) attacks and data injection vulnerabilities.
+
+2. Cross-Domain Misconfiguration (72 occurrences):
+Misconfigurations in handling cross-origin requests may allow unauthorized access to resources, increasing the risk of Cross-Origin Resource Sharing (CORS) attacks.
+
+3. Hidden File Found (4 occurrences):
+Sensitive files are accessible and may expose configuration or source code.
+
+4. Timestamp Disclosure - Unix (73 occurrences):
+The system reveals timestamps that can be used to infer system information, aiding attackers in planning exploits.
+
+5. Modern Web Application Issues (50 occurrences):
+Various best practice issues in web application security were detected.
